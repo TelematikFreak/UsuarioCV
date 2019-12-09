@@ -11,7 +11,7 @@ import RealmSwift
 
 class MasterModel {
     let realm = try! Realm()
-
+    
     init() {
     }
     
@@ -28,6 +28,19 @@ class MasterModel {
     func getUser(_ id: Int) -> User {
         let users = realm.objects(User.self)
         return users[id]
+    }
+    
+    func deleteUser(_ id: Int) {
+        let curriculums = realm.objects(Curriculum.self)
+        let users = realm.objects(User.self)
+        
+        let userTodelete = users[id]
+        let curriculumTodelete = curriculums[userTodelete.cv]
+        
+        try! realm.write {
+            realm.delete(curriculumTodelete)
+            realm.delete(userTodelete)
+        }
     }
     
 }

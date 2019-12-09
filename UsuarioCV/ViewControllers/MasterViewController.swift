@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import RealmSwift
 
 class MasterViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     let model: MasterModel = MasterModel()
@@ -15,6 +16,7 @@ class MasterViewController: UIViewController, UITableViewDelegate, UITableViewDa
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        print(Realm.Configuration.defaultConfiguration.fileURL!)
         tableView.dataSource = self
         tableView.delegate = self
     }
@@ -27,6 +29,17 @@ class MasterViewController: UIViewController, UITableViewDelegate, UITableViewDa
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
         cell.textLabel?.text = model.getNameAndSurname(indexPath.row)
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        return true
+    }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if (editingStyle == .delete) {
+            model.deleteUser(indexPath.row)
+            tableView.deleteRows(at: [indexPath], with: .fade)
+        }
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
