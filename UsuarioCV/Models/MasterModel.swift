@@ -26,8 +26,8 @@ class MasterModel {
     }
     
     func getUser(_ id: Int) -> User {
-        let users = realm.objects(User.self)
-        return users[id]
+        let user = realm.objects(User.self)
+        return user[id]
     }
     
     func deleteUser(_ id: Int) {

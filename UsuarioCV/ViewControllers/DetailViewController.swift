@@ -31,21 +31,11 @@ class DetailViewController: UIViewController {
         surnameLabel.text = "Surname: " + user!.surname
         ageLabel.text = "Age: \(user!.age)"
         jobLabel.text = "Job: " + user!.job
-        idLabel.text = "ID: " + user!.id
+        guard let userID = user?.id else { return }
+        idLabel.text = "ID: \(userID)"
         let detailModel = DetailModel()
         cvTitleLabel.text = detailModel.getCurriculum(id: user!.cv).title
         cvDescriptionLabel.text = detailModel.getCurriculum(id: user!.cv).cvDescription
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
