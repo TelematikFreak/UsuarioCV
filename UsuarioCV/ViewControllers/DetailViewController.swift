@@ -32,9 +32,8 @@ class DetailViewController: UIViewController {
         ageLabel.text = "Age: \(user!.age)"
         jobLabel.text = "Job: " + user!.job
         idLabel.text = "ID: " + user!.id
-        let detailModel = DetailModel()
-        cvTitleLabel.text = detailModel.getCurriculum(id: user!.cv).title
-        cvDescriptionLabel.text = detailModel.getCurriculum(id: user!.cv).cvDescription
+        cvTitleLabel.text = user?.cv?.title
+        cvDescriptionLabel.text = user?.cv?.cvDescription
     }
     
 

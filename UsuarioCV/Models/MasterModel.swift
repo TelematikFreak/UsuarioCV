@@ -31,16 +31,12 @@ class MasterModel {
     }
     
     func deleteUser(_ id: Int) {
-        let curriculums = realm.objects(Curriculum.self)
         let users = realm.objects(User.self)
         
         let userTodelete = users[id]
-        let curriculumTodelete = curriculums[userTodelete.cv]
-        
+                
         try! realm.write {
-            realm.delete(curriculumTodelete)
             realm.delete(userTodelete)
         }
     }
-    
 }

@@ -24,6 +24,10 @@ class AddNewUserViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
+    
     
     /*
      // MARK: - Navigation
@@ -57,16 +61,13 @@ class AddNewUserViewController: UIViewController {
                     let cv = Curriculum()
                     cv.title = cvTitle!
                     cv.cvDescription = cvDescription!
-                    let users = realm.objects(User.self)
-                    cv.id = users.count
                     let user = User()
                     user.name = name!
                     user.surname = surname!
                     user.age = Int(age!)!
-                    user.job = job!
                     user.id = id!
-                    user.cv = cv.id
-                    realm.add(cv)
+                    user.job = job!
+                    user.cv = cv
                     realm.add(user)
                 }
             }

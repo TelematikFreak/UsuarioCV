@@ -16,7 +16,6 @@ class MasterViewController: UIViewController, UITableViewDelegate, UITableViewDa
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        print(Realm.Configuration.defaultConfiguration.fileURL!)
         tableView.dataSource = self
         tableView.delegate = self
     }
@@ -39,6 +38,7 @@ class MasterViewController: UIViewController, UITableViewDelegate, UITableViewDa
         if (editingStyle == .delete) {
             model.deleteUser(indexPath.row)
             tableView.deleteRows(at: [indexPath], with: .fade)
+            tableView.reloadData()
         }
     }
     

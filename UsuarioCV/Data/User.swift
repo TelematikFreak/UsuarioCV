@@ -15,5 +15,5 @@ class User: Object {
     @objc dynamic var age: Int = 0
     @objc dynamic var job: String = ""
     @objc dynamic var id: String = ""
-    @objc dynamic var cv: Int = 0
+    @objc dynamic var cv: Curriculum?
 }
