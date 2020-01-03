@@ -51,7 +51,6 @@ class AddNewUserViewController: UIViewController {
                 let name = nameTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines)
                 let surname = surnameTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines)
                 let age = ageTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines)
-                let id = idTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines)
                 let job = jobTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines)
                 let cvTitle = cvTitleTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines)
                 let cvDescription = cvDescriptionTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines)
@@ -61,13 +60,16 @@ class AddNewUserViewController: UIViewController {
                     let cv = Curriculum()
                     cv.title = cvTitle!
                     cv.cvDescription = cvDescription!
+                    let users = realm.objects(User.self)
+                    cv.id = UUID().uuidString
                     let user = User()
                     user.name = name!
                     user.surname = surname!
                     user.age = Int(age!)!
                     user.id = id!
                     user.job = job!
-                    user.cv = cv
+                    user.id = UUID().uuidString
+                    realm.add(cv)
                     realm.add(user)
                 }
             }
