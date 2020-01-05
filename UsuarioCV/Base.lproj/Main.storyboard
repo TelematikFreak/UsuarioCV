@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="h5T-qq-wpP">
-    <device id="retina4_7" orientation="portrait" appearance="light"/>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="h5T-qq-wpP">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -17,11 +19,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="gGe-ab-0PL">
-                                <rect key="frame" x="0.0" y="44" width="375" height="623"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" textLabel="EQf-D7-FTd" style="IBUITableViewCellStyleDefault" id="Rok-sJ-S8m">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="43.5"/>
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Rok-sJ-S8m" id="Udj-g8-czw">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
@@ -80,7 +82,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="6Jm-p7-9OK">
-                                <rect key="frame" x="0.0" y="44" width="375" height="300.5"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="300.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Ik-IE-AeL">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="40"/>
@@ -121,9 +123,9 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Curriculum Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3lq-pF-ZON">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Curriculum Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3lq-pF-ZON">
                                         <rect key="frame" x="0.0" y="240" width="375" height="40"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -171,14 +173,14 @@
             <objects>
                 <viewController id="v4y-TW-wxU" customClass="AddNewUserViewController" customModule="UsuarioCV" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="02F-Wy-06W">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="MYg-Rv-GJx">
-                                <rect key="frame" x="0.0" y="56" width="375" height="240"/>
+                                <rect key="frame" x="20" y="84" width="335" height="280"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gS9-7R-1rm">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="40"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="335" height="40"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="Ay7-h8-X2r"/>
                                         </constraints>
@@ -186,32 +188,39 @@
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Surname..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jdo-d8-yNZ">
-                                        <rect key="frame" x="0.0" y="40" width="375" height="40"/>
+                                        <rect key="frame" x="0.0" y="40" width="335" height="40"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="ID Card..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="m68-hf-xbu">
+                                        <rect key="frame" x="0.0" y="80" width="335" height="40"/>
+                                        <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Age..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Fw3-Xm-9ja">
-                                        <rect key="frame" x="0.0" y="80" width="375" height="40"/>
+                                        <rect key="frame" x="0.0" y="120" width="335" height="40"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Job..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HYy-8l-ZoX">
-                                        <rect key="frame" x="0.0" y="120" width="375" height="40"/>
+                                        <rect key="frame" x="0.0" y="160" width="335" height="40"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="CV Title..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3fJ-3N-BGK">
-                                        <rect key="frame" x="0.0" y="160" width="375" height="40"/>
+                                        <rect key="frame" x="0.0" y="200" width="335" height="40"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="CV Description..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UN0-60-JUa">
-                                        <rect key="frame" x="0.0" y="200" width="375" height="40"/>
+                                        <rect key="frame" x="0.0" y="240" width="335" height="40"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                 </subviews>
                                 <constraints>
+                                    <constraint firstItem="m68-hf-xbu" firstAttribute="height" secondItem="gS9-7R-1rm" secondAttribute="height" id="1qa-4y-guT"/>
                                     <constraint firstItem="Fw3-Xm-9ja" firstAttribute="height" secondItem="gS9-7R-1rm" secondAttribute="height" id="408-0s-mbE"/>
                                     <constraint firstItem="3fJ-3N-BGK" firstAttribute="height" secondItem="gS9-7R-1rm" secondAttribute="height" id="4WL-Vz-sKG"/>
                                     <constraint firstItem="HYy-8l-ZoX" firstAttribute="height" secondItem="gS9-7R-1rm" secondAttribute="height" id="YKW-yE-Mm5"/>
@@ -222,9 +231,9 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="MYg-Rv-GJx" firstAttribute="top" secondItem="RJg-de-JbE" secondAttribute="top" id="iQf-rq-zYF"/>
-                            <constraint firstItem="MYg-Rv-GJx" firstAttribute="leading" secondItem="RJg-de-JbE" secondAttribute="leading" id="lkQ-TS-g48"/>
-                            <constraint firstItem="RJg-de-JbE" firstAttribute="trailing" secondItem="MYg-Rv-GJx" secondAttribute="trailing" id="qgc-0l-xcK"/>
+                            <constraint firstItem="MYg-Rv-GJx" firstAttribute="top" secondItem="RJg-de-JbE" secondAttribute="top" constant="20" id="iQf-rq-zYF"/>
+                            <constraint firstItem="MYg-Rv-GJx" firstAttribute="leading" secondItem="RJg-de-JbE" secondAttribute="leading" constant="20" id="lkQ-TS-g48"/>
+                            <constraint firstItem="RJg-de-JbE" firstAttribute="trailing" secondItem="MYg-Rv-GJx" secondAttribute="trailing" constant="20" id="qgc-0l-xcK"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="RJg-de-JbE"/>
                     </view>
@@ -244,6 +253,7 @@
                         <outlet property="ageTextField" destination="Fw3-Xm-9ja" id="pqB-Ay-rE2"/>
                         <outlet property="cvDescriptionTextField" destination="UN0-60-JUa" id="9nP-L3-Fqg"/>
                         <outlet property="cvTitleTextField" destination="3fJ-3N-BGK" id="EV0-kT-mi9"/>
+                        <outlet property="idTextField" destination="m68-hf-xbu" id="NDH-Q9-6xE"/>
                         <outlet property="jobTextField" destination="HYy-8l-ZoX" id="LJg-1T-nnr"/>
                         <outlet property="nameTextField" destination="gS9-7R-1rm" id="bpK-yL-QUw"/>
                         <outlet property="surnameTextField" destination="jdo-d8-yNZ" id="CzC-Hg-jCF"/>
@@ -260,7 +270,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="h5T-qq-wpP" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="6uo-RJ-UJY">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -275,11 +285,10 @@
         <!--Navigation Controller-->
         <scene sceneID="LpK-dO-UNn">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Mgl-hX-wck" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="0Xv-Ec-Sxm" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="xIa-3W-fKX">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="56"/>
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -287,6 +296,7 @@
                         <segue destination="v4y-TW-wxU" kind="relationship" relationship="rootViewController" id="T2x-Zh-rTt"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Mgl-hX-wck" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1950" y="-153"/>
         </scene>
