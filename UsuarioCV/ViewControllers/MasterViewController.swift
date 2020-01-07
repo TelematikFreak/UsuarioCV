@@ -12,6 +12,7 @@ import RealmSwift
 class MasterViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     let model: MasterModel = MasterModel()
     @IBOutlet weak var tableView: UITableView!
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,6 +28,7 @@ class MasterViewController: UIViewController, UITableViewDelegate, UITableViewDa
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
         cell.textLabel?.text = model.getNameAndSurname(indexPath.row)
+        
         return cell
     }
     

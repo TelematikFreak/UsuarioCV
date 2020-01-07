@@ -18,10 +18,14 @@ class AddNewUserViewController: UIViewController {
     @IBOutlet weak var cvTitleTextField: UITextField!
     @IBOutlet weak var cvDescriptionTextField: UITextField!
     
+    @IBOutlet weak var rateSlider: UISlider! // examen
+    var rating:Int? // examen
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         // Do any additional setup after loading the view.
+        rating = Int(rateSlider.value) //examen
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -39,6 +43,11 @@ class AddNewUserViewController: UIViewController {
      }
      */
     
+    // examen
+    @IBAction func ratingHasChanged(_ sender: UISlider) {
+        rating = Int(sender.value)
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "donePressed" {
             if nameTextField.text != nil ||
@@ -55,6 +64,7 @@ class AddNewUserViewController: UIViewController {
                 let idCard = idTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines)
                 let cvTitle = cvTitleTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines)
                 let cvDescription = cvDescriptionTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines)
+                
                 let realm = try! Realm()
                 
                 try! realm.write {
@@ -66,6 +76,7 @@ class AddNewUserViewController: UIViewController {
                     user.age = Int(age!)!
                     user.idCard = idCard!
                     user.job = job!
+                    user.rate = rating! // examen
                     cv.title = cvTitle!
                     cv.cvDescription = cvDescription!
                     user.cv = cv
